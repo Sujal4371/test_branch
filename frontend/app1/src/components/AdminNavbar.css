@@ -1,0 +1,71 @@
+/* ================================
+   ADMIN NAVBAR – BRIGHT THEME
+================================ */
+
+.admin-navbar {
+  background: linear-gradient(90deg, #007bff, #009dff);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Brand */
+.admin-navbar .navbar-brand {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: 0.5px;
+}
+
+/* Nav links */
+.admin-navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin: 0 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-navbar .nav-link:hover,
+.admin-navbar .nav-link:focus {
+  color: #ffeb3b !important;
+  transform: translateY(-1px);
+}
+
+/* Dropdown menu */
+.admin-navbar .dropdown-menu {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.admin-navbar .dropdown-item {
+  font-weight: 600;
+  color: #333;
+}
+
+.admin-navbar .dropdown-item:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Disabled dropdown items */
+.admin-navbar .dropdown-item.disabled {
+  opacity: 0.6;
+}
+
+/* Admin button */
+.admin-navbar .btn-light {
+  background-color: #ffffff;
+  font-weight: 700;
+  border-radius: 20px;
+  padding: 6px 14px;
+  border: none;
+}
+
+.admin-navbar .btn-light:hover {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+/* Mobile toggle */
+.admin-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.8);
+}

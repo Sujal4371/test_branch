@@ -1,30 +1,13 @@
 import axios from "axios";
 import config from "./config";
 
+// GET all courses (backend requires start_date and end_date query)
 export async function getAllCourses(token, startDate, endDate) {
   const url = `${config.URL}/admin/course/all-courses?start_date=${startDate}&end_date=${endDate}`;
-  const res = await axios.get(url, {
-    headers: { token }, // IMPORTANT: backend expects header name "token"
-  });
+  const headers = { token };
+  const res = await axios.get(url, { headers });
   return res.data;
 }
-
-export async function deleteCourse(token, courseId) {
-  const url = `${config.URL}/admin/course/delete/${courseId}`;
-  const res = await axios.delete(url, {
-    headers: { token },
-  });
-  return res.data;
-}
-
-
-// // GET all courses (backend requires start_date and end_date query)
-// export async function getAllCourses(token, startDate, endDate) {
-//   const url = `${config.URL}/admin/course/all-courses?start_date=${startDate}&end_date=${endDate}`;
-//   const headers = { token };
-//   const res = await axios.get(url, { headers });
-//   return res.data;
-// }
 
 // ADD course (backend expects these exact keys)
 export async function addCourse(token, course) {
